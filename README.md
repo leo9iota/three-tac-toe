@@ -1,2 +1,3 @@
-# three-tac-toe
-Tic-Tac-Toe game in Three.js
+# Three-Tac-Toe
+
+3D Tic-Tac-Toe game
