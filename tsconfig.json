@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "jsx": "react-jsx", // Ensure TypeScript understands React JSX
-        "types": ["@react-three/fiber"] // Include types for @react-three/fiber
+        "types": ["vite/client", "react", "@react-three/fiber"] // Include types for @react-three/fiber
     },
     "files": [],
     "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }]
