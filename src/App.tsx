@@ -1,7 +1,7 @@
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei'; // Import orbital controls from drei
-import space from './assets/space.hdr'; // Import background image
+import space from './assets/hdri/space.hdr'; // Import background image
 
 const App = () => {
   return (
