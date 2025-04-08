@@ -1,30 +1,28 @@
+import React from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
-import React, { useRef } from 'react';
-import { Mesh } from 'three';
-
-const Box = () => {
-  const meshRef = useRef<Mesh>(null);
-
-  return (
-    <mesh ref={meshRef} rotation={[0, 0, 0]} scale={[1, 1, 1]}>
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={'#1e88e5'} />
-    </mesh>
-  );
-};
+import { OrbitControls, Environment } from '@react-three/drei'; // Import orbital controls from drei
+import space from './assets/space.hdr'; // Import background image
 
 const App = () => {
   return (
-    <div style={{ width: '100vw', height: '100vh' }}>
-      <Canvas camera={{ position: [3, 3, 3] }}>
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[10, 10, 5]} intensity={1} />
-        <Box />
-        <OrbitControls />
+    <>
+      <Canvas
+        camera={{
+          fov: 50,
+          position: [-10, -5, -15],
+          rotation: [Math.PI, 0, 0],
+        }}
+      >
+        <OrbitControls maxDistance={40} enableDamping />
+
+        {/* add lighting */}
+        <ambientLight />
+        <pointLight position={[-150, 300, -300]} intensity={0.9} />
+
+        <Environment background={true} files={space} />
       </Canvas>
-    </div>
+    </>
   );
 };
 
-export default App;
+export default React.memo(App);
