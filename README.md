@@ -1,6 +1,6 @@
 # Three-Tac-Toe
 
-Three-Tac-Toe game
+3D Tic-Tac-Toe game created with R3F
 
 ## 🛠️ Tech Stack
 
