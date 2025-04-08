@@ -1,5 +1,6 @@
 import React, { JSX } from 'react';
 
+// Use the same props as a native <mesh> element from React Three Fiber for full type safety and autocompletion
 type GridLineProps = JSX.IntrinsicElements['mesh'];
 
 function GridLine(props: GridLineProps) {
